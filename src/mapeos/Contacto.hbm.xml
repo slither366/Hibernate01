@@ -4,5 +4,12 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="hibernatenormal.Contacto" table="CONTACTOS"></class>
+    <class name="hibernatenormal.Contacto" table="CONTACTOS">
+        <id name="id" column="ID">
+            <generator class="identity"/>
+        </id>
+        <property name="nombre" type="string" column="NOMBRE"/>
+        <property name="email"/>
+        <property name="telefono"/>
+    </class>
 </hibernate-mapping>
